@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>InstaSource | AI Manufacturing Sourcing Cockpit</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script defer src="app.js"></script>
+</head>
+<body>
+  <nav class="nav">
+    <div class="brand"><span>IS</span><b>InstaSource</b></div>
+    <div class="navlinks"><a href="#problem">Problem</a><a href="#flow">Flow</a><a href="#savings">Savings</a><a href="#stack">Stack</a></div>
+    <a class="cta" href="#demo">View Demo</a>
+  </nav>
+
+  <header class="hero">
+    <div class="hero-text">
+      <p class="eyebrow">Autonomous B2B manufacturing agent</p>
+      <h1>Turn a blueprint into a ranked supplier shortlist in minutes.</h1>
+      <p class="sub">InstaSource helps hardware founders, engineers, and procurement teams convert part images into specs, discover suppliers, compare landed cost, review risk, and keep buyer identity private.</p>
+      <div class="hero-actions"><a href="#flow" class="button primary">See the process</a><a href="#savings" class="button ghost">Calculate impact</a></div>
+      <div class="stats">
+        <div><strong>6-step</strong><span>agent workflow</span></div>
+        <div><strong>Top 3</strong><span>ranked factories</span></div>
+        <div><strong>1 record</strong><span>for evidence</span></div>
+      </div>
+    </div>
+    <div class="cockpit" id="demo">
+      <div class="screen-top"><span></span><span></span><span></span><b>Live sourcing run</b></div>
+      <div class="upload-card"><span class="blueprint"></span><div><b>Aluminum keyboard case</b><small>6061 • CNC • black anodized • ±0.10 mm</small></div></div>
+      <div class="pipeline-mini"><span class="on">Spec</span><span class="on">Search</span><span class="on">Rank</span><span>RFQ</span></div>
+      <div class="radar"><i></i><i></i><i></i><b></b></div>
+      <div class="supplier-card"><strong>Factory Fit A</strong><em>92 / 100</em><small>$42-$55/unit • 18-24 days</small></div>
+      <div class="supplier-card muted"><strong>Factory Fit B</strong><em>86 / 100</em><small>$48-$61/unit • 21-28 days</small></div>
+    </div>
+  </header>
+
+  <section id="problem" class="section split">
+    <div><p class="eyebrow">Why it is needed</p><h2>Manufacturing sourcing is slow because the work is scattered.</h2><p>Teams usually move between drawings, emails, supplier directories, spreadsheets, shipping estimates, and privacy concerns before they can even decide who is worth contacting.</p></div>
+    <div class="problem-grid">
+      <article><b>01</b><h3>Missing specs</h3><p>Suppliers ask for material, finish, tolerance, MOQ, dimensions, and shipping details again and again.</p></article>
+      <article><b>02</b><h3>Manual discovery</h3><p>Supplier search evidence is spread across browser tabs and B2B websites.</p></article>
+      <article><b>03</b><h3>Hidden landed cost</h3><p>Unit price is not enough. Freight, duty, timeline, and risk change the real decision.</p></article>
+      <article><b>04</b><h3>Privacy risk</h3><p>Buyer name and shipping identity should not leak during early supplier discovery.</p></article>
+    </div>
+  </section>
+
+  <section class="section impact-band">
+    <div><span>Manual RFQ prep</span><strong>2-5 days</strong><small>Emails, research, spreadsheets</small></div>
+    <div><span>InstaSource first pass</span><strong>10-20 min</strong><small>Spec + search + ranking</small></div>
+    <div><span>Decision acceleration</span><strong>80%+</strong><small>Illustrative time reduction</small></div>
+    <div><span>Private discovery</span><strong>Masked</strong><small>Company and shipping details</small></div>
+  </section>
+
+  <section id="flow" class="section">
+    <p class="eyebrow center">Visual view map</p><h2 class="center">How the sourcing agent works</h2>
+    <div class="flowmap">
+      <div>Upload blueprint / image</div><span>→</span><div>Extract technical spec</div><span>→</span><div>Bright Data supplier search</div><span>→</span><div>Store evidence</div><span>→</span><div>Rank suppliers</div><span>→</span><div>Landed cost + risk report</div>
+    </div>
+  </section>
+
+  <section class="section example">
+    <div><p class="eyebrow">Real-time example</p><h2>250 aluminum keyboard cases</h2><p>A founder needs Aluminum 6061 cases with CNC machining, black anodizing, ±0.10 mm tolerance, and delivery to the US.</p></div>
+    <div class="dashboard">
+      <div class="metric"><span>Target qty</span><b>250</b></div>
+      <div class="metric"><span>Estimated unit range</span><b>$42-$61</b></div>
+      <div class="metric"><span>Supplier shortlist</span><b>3 best</b></div>
+      <div class="metric"><span>Lead time range</span><b>18-28 days</b></div>
+      <div class="wide"><h3>What InstaSource gives back</h3><p>Clean spec, supplier evidence, ranked options, landed-cost estimate, buyer questions, risk flags, and next actions before a formal RFQ.</p></div>
+    </div>
+  </section>
+
+  <section id="savings" class="section split savings">
+    <div><p class="eyebrow">Money impact</p><h2>How it can save money</h2><p>The biggest saving is avoiding poor supplier choices before committing to tooling, prototype batches, or freight. This calculator uses an illustrative sourcing example.</p></div>
+    <div class="calculator">
+      <label>Quantity <input id="qty" type="number" value="250"></label>
+      <label>High quote / unit <input id="high" type="number" value="61"></label>
+      <label>Better quote / unit <input id="low" type="number" value="42"></label>
+      <label>Manual research hours <input id="hours" type="number" value="24"></label>
+      <label>Hourly cost <input id="rate" type="number" value="45"></label>
+      <div class="result"><span>Potential avoided cost</span><b id="save">$5,830</b><small>Unit-price spread + research time</small></div>
+    </div>
+  </section>
+
+  <section id="stack" class="section">
+    <p class="eyebrow center">Tool stack</p><h2 class="center">Every provider has a clear job</h2>
+    <div class="tools">
+      <article><h3>SenseNova</h3><p>Vision/spec extraction from blueprint, image, or part request.</p></article>
+      <article><h3>Kimi / Moonshot</h3><p>Fallback vision and structured feasibility report generation.</p></article>
+      <article><h3>Bright Data</h3><p>Public supplier discovery and evidence collection.</p></article>
+      <article><h3>Daytona-ready logic</h3><p>Secure boundary for landed cost, customs, freight, and tax calculations.</p></article>
+      <article><h3>Terminal 3 / T3N</h3><p>Private identity boundary for masked buyer and shipping data.</p></article>
+      <article><h3>Local discovery store</h3><p>Stores supplier search records, parsed candidates, and evidence trail.</p></article>
+    </div>
+  </section>
+
+  <section class="section roadmap">
+    <p class="eyebrow center">Business roadmap</p><h2 class="center">From MVP to sourcing operating system</h2>
+    <div class="road"><div><b>1</b><span>RFQ email generation</span></div><div><b>2</b><span>Verified supplier profiles</span></div><div><b>3</b><span>CAD/PDF parsing</span></div><div><b>4</b><span>Quote tracking</span></div><div><b>5</b><span>PO approval handoff</span></div></div>
+  </section>
+</body>
+</html>
